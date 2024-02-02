@@ -10,23 +10,17 @@ public class ShipRotation : MonoBehaviour
     [Tooltip("The speed at which the ship will rotate")]
     float m_RotationSpeed = 1.0f;
 
-    [SerializeField]
-    [Tooltip("The ship's minimum local")]
-    float m_MinimumLocalRotation = -45.0f;
+    // [SerializeField]
+    // [Tooltip("The ship's minimum local")]
+    // float m_MinimumLocalRotation = -45.0f;
 
-    [SerializeField]
-    [Tooltip("The ship's maximum local")]
-    float m_MaximumLocalRotation = 45.0f;
+    // [SerializeField]
+    // [Tooltip("The ship's maximum local")]
+    // float m_MaximumLocalRotation = 45.0f;
 
     Vector2 m_JoystickValue;
 
-    private bool joystickActive = false;
-
-
-    void Start()
-    {
-
-    }
+    // private bool joystickActive = false;
 
     void Update()
     {
@@ -43,16 +37,12 @@ public class ShipRotation : MonoBehaviour
 
     public void OnJoystickValueChangeX(float x)
     {
-        joystickActive = true;
         m_JoystickValue.x = x;
-        Debug.Log("X: " + x);
     }
 
     public void OnJoystickValueChangeY(float y)
     {
-        joystickActive = true;
         m_JoystickValue.y = y;
-        Debug.Log("Y: " + y);
     }
 
 }
